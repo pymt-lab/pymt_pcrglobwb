@@ -12,7 +12,7 @@ info:
   summary: PyMT plugins for PCR-GLOBWB
 library:
   entry_point:
-  - PcrGlobWb=pcrblobwb.bmiPcrglobwb:BmiPCRGlobWB
+  - PcrGlobWb=pcrglobwb.bmiPcrglobwb:BmiPCRGlobWB
   language: python
   register: ''
 plugin:

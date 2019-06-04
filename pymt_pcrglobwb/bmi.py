@@ -3,7 +3,7 @@ import os
 import pkg_resources
 
 
-from pcrblobwb.bmiPcrglobwb import BmiPCRGlobWB as PcrGlobWb
+from pcrglobwb.bmiPcrglobwb import BmiPCRGlobWB as PcrGlobWb
 
 PcrGlobWb.__name__ = "PcrGlobWb"
 PcrGlobWb.METADATA = os.path.abspath(
