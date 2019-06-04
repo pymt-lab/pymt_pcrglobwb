@@ -1,0 +1,3 @@
+recursive-include pymt_rafem/data/ *
+include versioneer.py
+include pymt_pcrglobwb/_version.py
