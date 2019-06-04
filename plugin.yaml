@@ -1,0 +1,21 @@
+build:
+  define_macros: []
+  extra_compile_args: []
+  include_dirs: []
+  libraries: []
+  library_dirs: []
+  undef_macros: []
+info:
+  github_username: mcflugen
+  plugin_author: Eric Hutton
+  plugin_license: MIT
+  summary: PyMT plugins for PCR-GLOBWB
+library:
+  entry_point:
+  - PcrGlobWb=pcrblobwb.bmiPcrglobwb:BmiPCRGlobWB
+  language: python
+  register: ''
+plugin:
+  name: pcrglobwb
+  requirements:
+  - pcrglobwb

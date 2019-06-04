@@ -1,0 +1,4 @@
+name: pcrglobwb
+language: python
+package: pcrglobwb
+class: PcrGlobWb

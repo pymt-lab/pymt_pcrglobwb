@@ -1,0 +1,44 @@
+{% set data = load_setup_py_data() %}
+
+package:
+  name: "pymt_pcrglobwb"
+  version: {{ data.get('version') }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - python
+    - pip
+    - cython
+    - numpy 1.11.*
+    - model_metadata
+    - pcrglobwb 
+  run:
+    - python
+    - {{ pin_compatible('numpy') }}
+    - pcrglobwb 
+
+test:
+  requires:
+    - bmi-tester
+    - model_metadata
+  imports:
+    - pymt_pcrglobwb
+  commands:
+    - config_file=$(mmd-stage BmiPCRGlobWB . > MANIFEST && mmd-query BmiPCRGlobWB --var=run.config_file.path)
+    - bmi-test pymt_pcrglobwb.bmi:BmiPCRGlobWB --config-file=$config_file --manifest=MANIFEST -v
+
+about:
+  summary: Python package that wraps the pcrglobwb BMI.
+  home: https://github.com/mcflugen/pymt_pcrglobwb
+  license: MIT license
+  license_file: LICENSE
+  dev_url: https://github.com/mcflugen/pymt_pcrglobwb
