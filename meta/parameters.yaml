@@ -1,0 +1,136 @@
+start_time:
+  description: Set start time of model run YYYY-MM-DD
+  value:
+    type: string
+    default: 2001-01-01
+    
+end_time:
+  description: Set end time of model run YYYY-MM-DD
+  value:
+    type: string
+    default: 2010-12-31
+
+spinup_use_output_directory:
+  description: Use the output directory as spinup for new model run
+  value:
+    type: boolean
+    default: True
+
+spinup_max_spinup_years:
+  description: Amount of spinup years, spinup is performed with using the first year
+    value:
+        type: long
+        default: 2
+        range:
+          min: 0
+          max: 100000000
+    units: yr
+
+meteo_reference_PET_method:
+  description: Choose reference_PET_method, Hamon or Input
+  value:
+    type: string
+    default: Hamon
+    
+meteo_reference_PET_file:
+  description: NetCDF file if reference_PET_method is set to Input
+  value:
+    type: file
+    default: 'None'
+    files: 'None'
+    
+land_surface_include_irrigation:
+  description: Include the irrigation component of PCR-GLOBWB
+  value:
+    type: boolean
+    default: False
+    
+land_surface_include_domestic_water_demand:
+  description: Include domestic water demand
+  value:
+    type: boolean
+    default: False
+    
+land_surface_include_industry_water_demand:
+  description: Include industry water demand
+  value:
+    type: boolean
+    default: False
+    
+land_surface_include_livestock_water_demand:
+  description: include livestock water demand
+  value:
+    type: boolean
+    default: False
+    
+land_surface_domestic_water_demand_file:
+  description: NetCDF file if land_surface_include_domestic_water_demand is set to True
+  value:
+    type: file
+    default: 'None'
+    files: 'None'
+    
+land_surface_industry_water_demand_file:
+  description: NetCDF file if land_surface_include_industry_water_demand is set to True
+  value:
+    type: file
+    default: 'None'
+    files: 'None'
+    
+land_surface_livestock_water_demand_file:
+  description: NetCDF file if land_surface_include_livestock_water_demand is set to True
+  value:
+    type: file
+    default: 'None'
+    files: 'None'
+
+land_surface_livestock_water_demand_file:
+  description: NetCDF file if land_surface_include_livestock_water_demand is set to True
+  value:
+    type: file
+    default: 'None'
+    files: 'None'
+    
+groundwater_minimum_recession_coefficient:
+  description: The minimum recession coefficient of the groundwater store
+  value:
+    type: float
+    default: 1.0e-4
+    range:
+      min: 0.0
+      max: 1.0e-10
+units: 'm/d'
+
+routing_mannings_N:
+  description: The Mannings N value for routing
+  value:
+    type: float
+    default: 0.04
+    range:
+      min: 0.00
+      max: 10.00
+units: '-'
+    
+routing_method:
+  description: The routing method applied, either accuTravelTime or KinematicWave
+  value:
+    type: string
+    default: accuTravelTime
+
+routing_dynamic_floodplain:
+  description: Use of dynamic floodplain routing
+  value:
+    type: boolean
+    default: False
+    
+reporting_output_daily_total_netcdf:
+  description: Reporting option for daily total output, multiple entries possible seperated with comma (discharge, gwRecharge,totalGroundwaterAbstraction,groundwaterAbsReturnFlow,totalRunoff,baseflow,totalEvaporation,desalinationAbstraction,surfaceWaterAbstraction,nonFossilGroundwaterAbstraction,fossilGroundwaterAbstraction,irrGrossDemand,nonIrrGrossDemand,totalGrossDemand,nonIrrWaterConsumption,nonIrrReturnFlow,runoff,actualET)
+  value:
+    type: string
+    default: discharge
+    
+reporting_netcdf_metadata_description:
+  description: Metadata description in NetCDF output
+  value:
+    type: string
+    default: test version PyMT

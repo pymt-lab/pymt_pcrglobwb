@@ -1,0 +1,11 @@
+author: Edwin H. Sutanudjaja, Rens van Beek, Niko Wanders, Yoshihide Wada, 
+Joyce H. C. Bosmans, Niels Drost, Ruud J. van der Ent, Inge E. M. de Graaf, Jannis M. Hoch, 
+Kor de Jong, Derek Karssenberg, Patricia López López, Stefanie Peßenteiner, Oliver Schmitz, 
+Menno W. Straatsma, Ekkamol Vannametee, Dominik Wisser, and Marc F. P. Bierkens
+Faculty of Geosciences, Utrecht University, Utrecht, The Netherlands
+doi: https://doi.org/10.5194/gmd-11-2429-2018
+email: E.H.Sutanudjaja@uu.nl
+license: GPL license, version 3
+url: https://github.com/UU-Hydro/PCR-GLOBWB_model
+version: 2.0
+summary: "We present PCR-GLOBWB 2, a global hydrology and water resources model. Compared to previous versions of PCR-GLOBWB, this version fully integrates water use. Sector-specific water demand, groundwater and surface water withdrawal, water consumption, and return flows are dynamically calculated at every time step and interact directly with the simulated hydrology. PCR-GLOBWB 2 has been fully rewritten in Python and PCRaster Python and has a modular structure, allowing easier replacement, maintenance, and development of model components. PCR-GLOBWB 2 has been implemented at 5 arcmin resolution, but a version parameterized at 30 arcmin resolution is also available. Both versions are available as open-source codes on https://github.com/UU-Hydro/PCR-GLOBWB_model (Sutanudjaja et al., 2017a). PCR-GLOBWB 2 has its own routines for groundwater dynamics and surface water routing. These relatively simple routines can alternatively be replaced by dynamically coupling PCR-GLOBWB 2 to a global two-layer groundwater model and 1-D–2-D hydrodynamic models. Here, we describe the main components of the model, compare results of the 30 and 5 arcmin versions, and evaluate their model performance using Global Runoff Data Centre discharge data. Results show that model performance of the 5 arcmin version is notably better than that of the 30 arcmin version. Furthermore, we compare simulated time series of total water storage (TWS) of the 5 arcmin model with those observed with GRACE, showing similar negative trends in areas of prevalent groundwater depletion. Also, we find that simulated total water withdrawal matches reasonably well with reported water withdrawal from AQUASTAT, while water withdrawal by source and sector provide mixed results."
